@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Box from '../components/Box.astro'
+
+const lucasFamily = [
+    {
+        "name": "Tiberiu",
+        "relation": "Brother",
+        "age": 11,
+        "favColor": "blue"
+    },
+    {
+        "name": "Bianca",
+        "relation": "Mother",
+        "age": 38,
+        "favColor": "green"
+    }, 
+    {
+        "name": "Billy",
+        "relation": "Dog",
+        "age": 7,
+        "favColor": "pink"
+    }
+]
+---
+
+<Layout title="About luca">
+    <h1>About Luca</h1>
+
+    {lucasFamily.map((person) => (
+        <Box color={person.favColor}>{person.name} :  {person.relation} Age: {person.age}</Box>
+    ))}
+    
+</Layout>
